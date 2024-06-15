@@ -5,6 +5,7 @@
 html {
     font-size: 62.5%;
     --primary-color: #0F1B4C;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -40,16 +41,24 @@ a{
     margin-right: auto;
 }
 
-.header {
+.header-nav {
     background-color: #E6F0FF;
-    height: 100vh;
+    position: sticky;
+    padding-top: 26px;
+    top: -26px;
+    z-index: 1;
+}
+
+.hero-wrap {
+    background-color: #E6F0FF;
+    height: calc(100vh - 90px);
     position: relative;
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    padding: 12px 0;
 }
 
 .navbar ul {
@@ -85,7 +94,7 @@ a{
 }
 
 .hero {
-    margin-top: 130px;
+    padding-top: 130px;
 }
 
 .hero .info {
@@ -152,9 +161,21 @@ a{
 }
 
 .clients .images {
-    margin-top: 96px;
+    margin-top: 70px;
     display: flex;
     justify-content: space-between;
+}
+
+.clients .images a {
+    display: flex;
+    align-items: center;
+    padding: 0px 42px;
+    height: 91px;
+    border-radius: 12px;
+}
+
+.clients .images a:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .guides {
